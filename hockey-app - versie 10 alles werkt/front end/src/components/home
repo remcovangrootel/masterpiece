@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Welkom bij het Hockey Team Dashboard</h1>
+      <p>Kies links in het menu een kaart om spelers, trainingen of scores te beheren.</p>
+    </div>
+  );
+}
+
