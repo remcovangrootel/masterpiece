@@ -1,0 +1,12 @@
+.player-photo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
