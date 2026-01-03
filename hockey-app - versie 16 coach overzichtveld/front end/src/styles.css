@@ -1,0 +1,245 @@
+/* ===== Algemene layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+a {
+  color: #0077cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Container voor alle spelers ===== */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;     /* zorgt dat ze doorlopen op nieuwe regel */
+  gap: 1rem;           /* ruimte tussen de kaarten */
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+/* ===== Individuele spelerkaart ===== */
+.player-card {
+  flex: 0 0 200px;     /* vaste breedte per kaart */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Foto styling ===== */
+.player-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;   /* foto netjes bijsnijden */
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Fallback als er geen foto is ===== */
+.player-photo.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  color: #666;
+  font-size: 2rem;
+  height: 150px;
+  border-radius: 6px;
+}
+
+/* ===== Links naar detailpagina ===== */
+.player-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.player-link:hover h3 {
+  text-decoration: underline;
+}
+
+/* ===== Detailpagina speler ===== */
+.player-detail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.player-detail img.player-photo {
+  max-width: 250px;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+}
+
+/* ===== Score tabel ===== */
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.score-table th,
+.score-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.score-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+/* ===== Trainingslijst ===== */
+.training-list {
+  list-style: none;
+  padding: 0;
+}
+
+.training-list li {
+  background: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* ===== Logo styling ===== */
+.logo {
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 1rem auto;
+}
+/* Algemene badge-stijl */
+.reason-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+/* Kleuren per reden */
+.reason-ziek {
+  background-color: #1e90ff; /* blauw */
+}
+
+.reason-blessure {
+  background-color: #dc3545; /* rood */
+}
+
+.reason-privé,
+.reason-prive {
+  background-color: #6c757d; /* grijs */
+}
+
+.reason-voetbal {
+  background-color: #fd7e14; /* oranje */
+}
+
+.reason-school {
+  background-color: #20c997; /* turquoise */
+}
+
+.reason-geen {
+  background-color: #adb5bd; /* lichtgrijs */
+}
+
+/* Fallback voor onbekende redenen */
+[class^="reason-"]:not(.reason-ziek):not(.reason-blessure):not(.reason-privé):not(.reason-prive):not(.reason-voetbal):not(.reason-school):not(.reason-geen) {
+  background-color: #6f42c1; /* paars */
+}
+/* Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filters button {
+  padding: 6px 12px;
+  background: #2b8a3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tabel */
+.coach-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.coach-table th {
+  background: #e9ecef;
+  padding: 10px;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+}
+
+.coach-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.coach-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+/* Badges */
+.reason-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.reason-ziek { background-color: #1e90ff; }
+.reason-blessure { background-color: #dc3545; }
+.reason-privé, .reason-prive { background-color: #6c757d; }
+.reason-voetbal { background-color: #fd7e14; }
+.reason-school { background-color: #20c997; }
+.reason-geen { background-color: #adb5bd; }
+
+/* Fallback */
+[class^="reason-"]:not(.reason-ziek):not(.reason-blessure):not(.reason-privé):not(.reason-prive):not(.reason-voetbal):not(.reason-school):not(.reason-geen) {
+  background-color: #6f42c1;
+}
