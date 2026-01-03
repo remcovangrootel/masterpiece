@@ -1,0 +1,123 @@
+/* Achtergrond overlay */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+/* Modal container */
+.login-modal {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.25s ease-out;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* Titel */
+.login-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #2b8a3e;
+}
+
+.login-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Error */
+.login-error {
+  color: #dc3545;
+  background: #ffe6e6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Formulier */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #2b8a3e;
+  outline: none;
+  box-shadow: 0 0 4px rgba(43, 138, 62, 0.4);
+}
+
+/* Knoppen */
+.login-btn {
+  padding: 12px;
+  background: #2b8a3e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background: #237232;
+}
+
+.cancel-btn {
+  padding: 10px;
+  background: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #b3b3b3;
+}
+
+/* Animatie */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
